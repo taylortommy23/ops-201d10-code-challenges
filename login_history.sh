@@ -16,6 +16,7 @@ print_login_history() {
 
 # call the function
 print_login_history
-
+print_login_history
+print_login_history
 
 # Main
