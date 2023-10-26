@@ -18,6 +18,4 @@ print_login_history() {
 print_login_history
 
 
-
-
 # Main
