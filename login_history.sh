@@ -1,22 +1,17 @@
 #!/bin/bash
 
-# Script Name:                  Variables 101
+# Script Name:                  Ops-challenge-04
 # Author:                       Tommy Taylor
-# Date of latest revision:      10/25/2023
-# Purpose:                      Learn about variables 
+# Date of latest revision:      10/26/2023
+# Purpose:                      Arrays
 
 # Declaration of variables
-print_login_history() {
-   echo  "this is the login history:"
-   grep "Accepted password" /var/log/auth.log
-}
-
-
-
-
-# call the function
-print_login_history
-print_login_history
-print_login_history
-
-# Main
+variables=2
+#Main
+while variables=1
+do
+ps aux
+echo "Please enter PID to kill"
+read input
+kill $input
+done
