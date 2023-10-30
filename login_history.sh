@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Script Name:                  Ops-challenge-04
+# Script Name:                  Ops-challenge-05
 # Author:                       Tommy Taylor
 # Date of latest revision:      10/26/2023
 # Purpose:                      Arrays
