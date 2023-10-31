@@ -5,7 +5,7 @@
 # Date of latest revision:    10/25/2024  
 # Purpose:                    Ops 201 Challenge 06
 
-# Array to store the grocery list
+# Array to store the directory list
 directories=("dir1" "dir2" "dir3" "dir4")
 
 # Function to check if an dir is in the directory list
