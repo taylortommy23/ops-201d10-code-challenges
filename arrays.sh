@@ -13,7 +13,7 @@ touch ${directories[1]}/test.txt
 touch ${directories[2]}/test.txt
 touch ${directories[3]}/test.txt
 
-
+e
 
 
 # Main
