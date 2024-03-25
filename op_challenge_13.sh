@@ -1,20 +1,33 @@
 #!/bin/bash
-# Script:                     Opschallenge13
-# Author:                     Tommy Taylor
-# Date of latest revision:    11/8/2023
-# Purpose:                    op_challenge_13.sh
-# Prompt the user for a domain name
-read -p "Enter a domain name (e.g., google.com): " domain_name
-# Define the output file
-output_file="domain_info.txt"
-# Run whois, dig, host, and nslookup, and append the results to the output file
-{
-    echo "WHOIS Information:" > domain_info.txt
-    whois "$domain_name"
-    echo -e "\nDIG Information:" > domain_info.txt
-    dig "$domain_name"
-    echo -e "\nHOST Information:" > domain_info.txt
-    host "$domain_name"
-    echo -e "\nNSLOOKUP Information:"> domain_info.txt
-    nslookup "$domain_name"
+
+# Install whois
+sudo apt-get update
+sudo apt-get -y install whois
+
+# Declaration of variables
+whois $domain
+
+# Take a user input string. Presumably the string is a domain name such as Google.com.
+read -p "Enter Webpage Name: " domain
+cd /home/ns/CodeFellows-Ops-201d-Labs/CodeFellows-Ops-201d-Labs-2/
+touch domaininfo.txt
+
+# Declaration of functions
+Information_Gather() {
+
+# Run whois against a user input string.
+whois $domain > domaininfo.txt
+# Run dig against the user input string.
+dig $domain >> domaininfo.txt
+# Run host against the user input string.
+host $domain >> domaininfo.txt
+# Run nslookup against the user input string.
+nslookup $domain >> domaininfo.txt
+
 }
+
+# Main
+# Open Text Editor
+Information_Gather > domaininfo.txt
+
+# End
