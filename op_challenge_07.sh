@@ -1,21 +1,28 @@
 #!/bin/bash
 
-# Display Name of Computer
-echo " Computer Name"
-lshw | grep "ip="
+# Declaration of variables
 
-# Display CPU Information
-echo "CPU Information"
-lshw | grep -A 10 "cpu"
+# Declaration of functions
 
-# Display RAM information
-echo RAM Information
-lshw |grep -A 6 "*-memory"
 
- # Display Display adapter information
- echo "Display Adapter Information:"
- lshw | grep -A 14 "display"
+# Main
+# Print computer name
+echo "Computer Name:"
+sudo lshw -class system | head -n 1
+echo "---------------"
 
- # Display Network adapter information
- echo "Ntework Adapter Information:"
- lshw | grep -A 10 "network"
+# Print information
+echo "CPU Information:"
+sudo lshw | grep -A6 *-cpu
+
+echo "RAM Information:"
+sudo lshw | grep -A4 '*-memory' | grep -v 'slot'
+
+echo "Adapter Information:"
+sudo lshw | grep -A11 *-display | grep -v 'version' 
+
+echo "Network Adapter Information:"
+sudo lshw | grep -A15 *-network
+
+
+# End
